@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shweta Bhalerao TPM</title>
+<meta name="theme-color" content="#1a3a5c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE personal site for a TPM: confident, calm, precise
+   IDEA a transit route map: a career that runs on two lines, program management and engineering
+   PICTURE the route itself, leaving the program line, running along engineering, climbing back to "Next: TPM"
+   COLOUR her brand navy #1a3a5c as the hero ground, white below, coral #ff6f59 route, lime-white #e6f5c8 program line
+   TYPE Inter Tight 700 display + Inter text
+   LAYOUT laptop: nav, title across the top, route map full width beneath; phone: title, then the route turns vertical */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0b1622);--ink:light-dark(#0f1b2a,#e6edf5);--muted:light-dark(#4a5868,#a9b6c4);--line:light-dark(#d9dee5,#22364b);--panel:light-dark(#f4f6f9,#102233);--hero:light-dark(#1a3a5c,#0f2a44);--fig:light-dark(#1a3a5c,#e6f5c8);--link:light-dark(#1a3a5c,#e6f5c8);--coral:#ff6f59;--lime:#e6f5c8}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:"Inter Tight",Inter,system-ui,sans-serif;letter-spacing:-.02em;line-height:1.08;margin:0;text-wrap:balance}
+h2{font-size:clamp(28px,3.4vw,40px)}
+h3{font-size:21px;line-height:1.2}
+p{margin:0}
+a{color:var(--link)}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding-block:clamp(36px,5vw,72px);padding-left:max(5vw,16px,env(safe-area-inset-left,0px));padding-right:max(5vw,16px,env(safe-area-inset-right,0px))}
+.hero{background:var(--hero);color:#fff;padding-top:20px}
+.hero a{color:#fff}
+nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;margin-bottom:clamp(28px,4vw,52px)}
+.name{font:700 18px "Inter Tight",Inter,sans-serif;text-decoration:none}
+.links{display:flex;flex-wrap:wrap;gap:4px 18px}
+.links a{text-decoration:none;font-size:15px;padding:10px 0;opacity:.9}
+.links a:hover,.links a:focus-visible{opacity:1;text-decoration:underline}
+.top{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:24px 56px;align-items:end}
+.hero h1{font-size:clamp(34px,4.6vw,54px);max-width:16ch}
+.intro{font-size:17px;color:#d6e1ec;max-width:60ch}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
+.facts div{border-top:1px solid rgba(255,255,255,.28);padding-top:8px}
+.facts b{display:block;font:700 20px "Inter Tight",Inter,sans-serif;white-space:nowrap}
+.facts span{font-size:14px;color:#c4d2e0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid #fff}
+.btn.solid{background:var(--coral);border-color:var(--coral);color:#14161a!important}
+.btn:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.fig{position:relative;min-height:300px;margin-top:clamp(18px,3vw,36px)}
+.fig.tall{min-height:430px}
+.fig>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+svg text{paint-order:stroke;stroke:var(--hero);stroke-width:5px;stroke-linejoin:round}
+.route{fill:none;stroke:var(--coral);stroke-width:7;stroke-linecap:round}
+.go{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.6s .2s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.go{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+.legend{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:14px;color:#c4d2e0;margin-top:8px}
+.legend i{display:inline-block;width:26px;height:0;border-top:4px solid;vertical-align:middle;margin-right:8px;border-radius:2px}
+.lead{color:var(--muted);font-size:17px;max-width:62ch;margin-top:10px}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 56px;align-items:end;margin-bottom:28px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.prog{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 22px 18px;display:flex;flex-direction:column;gap:12px}
+.where{font-size:14px;color:var(--muted);font-weight:500}
+.prog dl{margin:0;display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 14px;font-size:15px}
+.prog dt{font-weight:600}
+.prog dd{margin:0;color:var(--muted)}
+.figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+.figs b{display:block;font:700 clamp(22px,2.4vw,30px) "Inter Tight",Inter,sans-serif;color:var(--fig);white-space:nowrap}
+.figs span{font-size:13px;color:var(--muted);line-height:1.35;display:block}
+.tint{background:var(--panel)}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.way h3{font-size:19px;margin-bottom:8px}
+.way p{color:var(--muted);font-size:15.5px}
+.way svg{width:44px;height:44px;margin-bottom:12px}
+.build{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:20px}
+.now{background:var(--hero);color:#fff;border-radius:14px;padding:24px}
+.now p{color:#d6e1ec;margin-top:10px}
+.tag{display:inline-block;background:var(--lime);color:#14301a;font-size:13px;font-weight:600;border-radius:999px;padding:3px 10px;margin-bottom:12px}
+.past{display:grid;gap:14px}
+.past div{border-top:1px solid var(--line);padding-top:12px}
+.past b{font-family:"Inter Tight",Inter,sans-serif;font-size:17px}
+.past p{color:var(--muted);font-size:15px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th{text-align:left;font-size:14px;color:var(--muted);font-weight:600;padding:8px 12px 8px 0;border-bottom:1.5px solid var(--ink)}
+td{padding:14px 12px 14px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td.d{white-space:nowrap}
+td b{font-weight:600}
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px 56px}
+.about p+p{margin-top:12px}
+.skills div{border-top:1px solid var(--line);padding:12px 0}
+.skills b{display:block;font-size:14px;margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:14px;border:1px solid var(--line);border-radius:999px;padding:3px 11px}
+.edu{list-style:none;padding:0;margin:14px 0 0}
+.edu li{padding:6px 0}
+.edu span{color:var(--muted)}
+.contact{background:var(--hero);color:#fff}
+.contact h2{font-size:clamp(30px,4vw,48px);max-width:18ch}
+.contact .lead{color:#d6e1ec}
+.reach{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
+.reach a{display:block;border-top:1px solid rgba(255,255,255,.3);padding-top:10px;color:#fff;text-decoration:none;min-height:44px}
+.reach a:hover b,.reach a:focus-visible b{text-decoration:underline}
+.reach span{display:block;font-size:14px;color:#c4d2e0}
+.reach b{overflow-wrap:anywhere}
+footer{font-size:14px;color:var(--muted);text-align:left}
+@media(max-width:900px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}.top,.head{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:720px){.grid2,.build,.about{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.grid4,.reach{grid-template-columns:minmax(0,1fr)}.facts b{font-size:18px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:grid;grid-template-columns:6.5em minmax(0,1fr);gap:10px;border:0;padding:3px 0}.stack td::before{content:attr(data-l);color:var(--muted);font-size:13px}}
+</style>
+</head>
+<body>
+
+<header class="hero band">
+  <div class="wrap">
+    <nav>
+      <a class="name" href="#">Shweta Bhalerao</a>
+      <div class="links"><a href="#programs">Programs</a><a href="#approach">Approach</a><a href="#experience">Experience</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    </nav>
+    <div class="top">
+      <h1>I run technical programs with an engineer's depth.</h1>
+      <div>
+        <p class="intro">Technical program manager for distributed systems and AI platforms. I started as an Associate TPM, then spent five years building and leading systems at Equifax, Mastercard, and Talent.com. Now I drive cross-functional programs from roadmap to launch: scope, milestones, dependencies, risk and stakeholders.</p>
+        <div class="cta"><a class="btn solid" href="#programs">See my programs</a><a class="btn" href="#contact">Let's talk</a></div>
+      </div>
+    </div>
+    <div class="facts">
+      <div><b>6+ years</b><span>program management and engineering</span></div>
+      <div><b>Santa Clara</b><span>San Francisco Bay Area</span></div>
+      <div><b>TPM roles</b><span>open to new opportunities</span></div>
+    </div>
+    <div class="fig" id="mapbox"><svg id="map" role="img" aria-label="Career route: Associate TPM at L&amp;T Infotech in 2019, then engineering at Equifax, Mastercard and Talent.com, and next, technical program management"></svg></div>
+    <div class="legend">
+      <span><i style="border-color:var(--lime)"></i>Program management line</span>
+      <span><i style="border-color:rgba(255,255,255,.4)"></i>Engineering line</span>
+      <span><i style="border-color:var(--coral)"></i>My route</span>
+      <span><i style="border-color:var(--coral);border-top-style:dashed"></i>Next stop</span>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="band" id="programs">
+  <div class="wrap">
+    <div class="head">
+      <h2>Programs I've driven</h2>
+      <p class="lead">Four programs, from client service delivery to an AI launch. Each shows the goal, the teams, the risks I managed and what changed.</p>
+    </div>
+    <div class="grid2">
+      <article class="prog">
+        <p class="where">Talent.com, 2025 to now, Tech Lead</p>
+        <h3>Conversational AI job-search assistant</h3>
+        <p>Took an AI assistant that helps job seekers search and apply in chat from roadmap to launch for a global marketplace.</p>
+        <dl>
+          <dt>Teams</dt><dd>Engineering, Product, Data</dd>
+          <dt>Risks</dt><dd>Hallucinations, prompt injection, LLM provider outages, inference cost and latency</dd>
+          <dt>How</dt><dd>Defined success metrics and KPIs with Product and Data, gated releases on an LLM evaluation harness, and cut inference cost and p95 latency with model routing and caching</dd>
+        </dl>
+        <div class="figs"><div><b>+70%</b><span>search outcome quality</span></div><div><b>+45%</b><span>decision accuracy</span></div><div><b>−60%</b><span>cross-team operational friction</span></div></div>
+      </article>
+      <article class="prog">
+        <p class="where">Mastercard, 2023 to 2025, Tech Lead</p>
+        <h3>PSD2-compliant virtual card issuance</h3>
+        <p>Led end-to-end delivery of a distributed card issuance platform, from requirements and domain modeling to production launch.</p>
+        <dl>
+          <dt>Teams</dt><dd>Engineering, Product, Operations</dd>
+          <dt>Risks</dt><dd>Duplicate card issuance, data drift between systems, partial outages</dd>
+          <dt>How</dt><dd>Mitigated the top compliance risk with idempotent APIs and distributed locking, drove release management with Jenkins CI/CD, and led an observability rollout with Datadog</dd>
+        </dl>
+        <div class="figs"><div><b>99.99%</b><span>uptime</span></div><div><b>70%</b><span>faster releases</span></div><div><b>−40%</b><span>production defects</span></div></div>
+      </article>
+      <article class="prog">
+        <p class="where">Equifax, 2021 to 2023, Software Development Engineer II with technical program responsibilities</p>
+        <h3>Enterprise data platform at scale</h3>
+        <p>Managed end-to-end delivery of distributed microservices, coordinating service decomposition, API contracts, and upstream and downstream dependencies across teams.</p>
+        <dl>
+          <dt>Teams</dt><dd>Platform, Product, Security, partner service teams</dd>
+          <dt>Risks</dt><dd>Data loss or duplication in batch and streaming pipelines, compliance and data governance</dd>
+          <dt>How</dt><dd>Owned risk and reliability planning for the pipelines, and worked with platform, product and security teams without formal authority, tracking work against roadmap milestones in Jira</dd>
+        </dl>
+        <div class="figs"><div><b>100K+</b><span>daily active users</span></div><div><b>+30%</b><span>scalability and reliability</span></div><div><b>+40%</b><span>pipeline throughput</span></div></div>
+      </article>
+      <article class="prog">
+        <p class="where">L&amp;T Infotech, 2019 to 2021, Associate Technical Program Manager</p>
+        <h3>Client service delivery</h3>
+        <p>Kept a UK air-conditioning manufacturer's enterprise applications running and improving, as the link between the client and the delivery teams.</p>
+        <dl>
+          <dt>Teams</dt><dd>Development, QA, Infrastructure, Support</dd>
+          <dt>Risks</dt><dd>SLA breaches and slow escalations</dd>
+          <dt>How</dt><dd>ITIL-based incident and change management, SLA tracking, a program RAID log, and weekly status reports to client leadership on risks, dependencies and release schedules</dd>
+        </dl>
+        <div class="figs"><div><b>4 teams</b><span>coordinated</span></div><div><b>Weekly</b><span>client status reports</span></div><div><b>SLAs</b><span>tracked and escalated</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band tint" id="approach">
+  <div class="wrap">
+    <div class="head"><h2>How I run programs</h2><p class="lead">Engineering taught me where programs really slip. These are the habits I bring to every one.</p></div>
+    <div class="grid4">
+      <div class="way"><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="4" y="8" width="36" height="28" rx="5" fill="none" stroke="var(--fig)" stroke-width="2.5"/><path d="M12 18l5 4-5 4M22 27h10" fill="none" stroke="var(--coral)" stroke-width="2.5" stroke-linecap="round"/></svg><h3>Understand the system first</h3><p>I read the design docs and follow the code paths, so estimates, risks and tradeoffs get real scrutiny.</p></div>
+      <div class="way"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 6L40 37H4z" fill="none" stroke="var(--fig)" stroke-width="2.5" stroke-linejoin="round"/><path d="M22 17v9" stroke="var(--coral)" stroke-width="3" stroke-linecap="round"/><circle cx="22" cy="31" r="1.8" fill="var(--coral)"/></svg><h3>Make risk visible early</h3><p>Risks and dependencies live on one list with clear owners, reviewed every week, not discovered at launch.</p></div>
+      <div class="way"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M6 12h32M6 22h32M6 32h20" stroke="var(--fig)" stroke-width="2.5" stroke-linecap="round"/><circle cx="34" cy="32" r="4" fill="var(--coral)"/></svg><h3>Keep one source of truth</h3><p>Roadmap, milestones and status sit in one place, so every team works from the same plan.</p></div>
+      <div class="way"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M6 36h32" stroke="var(--fig)" stroke-width="2.5" stroke-linecap="round"/><path d="M8 30l9-9 7 6 12-14" fill="none" stroke="var(--coral)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>Measure what matters</h3><p>Success metrics are agreed before launch: SLOs for platforms, quality metrics for AI systems.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="building">
+  <div class="wrap">
+    <div class="head"><h2>What I'm building</h2><p class="lead">Side projects, from TPM tooling and multi-agent AI to machine learning and accessibility.</p></div>
+    <div class="build">
+      <div class="now">
+        <span class="tag">In progress</span>
+        <h3>AI Program Status Assistant</h3>
+        <p>An LLM tool that reads GitHub issues and pull requests, tracks milestones and cross-team dependencies, flags at-risk work and drafts weekly stakeholder updates. It automates the status reporting TPMs do by hand.</p>
+      </div>
+      <div class="past">
+        <div><b>Agent Village, multi-agent AI platform (2025)</b><p>Multi-agent system on FastAPI and Supabase with persistent agent identities, proactive memory surfacing and tiered trust boundaries for safe collaboration between agents.</p></div>
+        <div><b>Automated Valuation Model</b><p>Ensemble model predicting Irish property prices from 1.3M+ records at 96% accuracy (University College Dublin).</p></div>
+        <div><b>Voice-driven Android app</b><p>Text-to-speech and voice commands so visually impaired users can use a phone independently, fully voice-navigable.</p></div>
+        <div><b>Women's empowerment matching platform</b><p>Full-stack Spring MVC app matching women from underserved backgrounds with jobs ranked by skills, experience and availability.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band tint" id="experience">
+  <div class="wrap">
+    <div class="head"><h2>Experience</h2><p class="lead">Program management first, then engineering leadership in fintech and AI.</p></div>
+    <div class="scroll">
+      <table class="stack">
+        <thead><tr><th>Role</th><th>Company</th><th>Dates</th><th>Highlight</th></tr></thead>
+        <tbody>
+          <tr><td><b>Senior Software Development Engineer, Tech Lead, AI Job-Search Assistant</b></td><td>Talent.com, San Francisco Bay Area</td><td class="d">Mar 2025 – now</td><td>Led the roadmap and launch of a conversational AI job-search assistant</td></tr>
+          <tr><td><b>Software Development Engineer II, Tech Lead, Virtual Card Issuance Platform</b></td><td>Mastercard, Dublin</td><td class="d">Aug 2023 – Mar 2025</td><td>Led delivery of a PSD2-compliant card platform at 99.99% uptime</td></tr>
+          <tr><td><b>Software Development Engineer II</b>, with technical program responsibilities</td><td>Equifax, Dublin</td><td class="d">Sep 2021 – Jul 2023</td><td>Managed delivery and cross-team dependencies for a 100K+ DAU data platform</td></tr>
+          <tr><td><b>Associate Technical Program Manager</b></td><td>L&amp;T Infotech, Mumbai</td><td class="d">Sep 2019 – Jan 2021</td><td>Ran service delivery and weekly client reporting for a UK manufacturer</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="about">
+  <div class="wrap about">
+    <div>
+      <h2>About</h2>
+      <p class="lead">I'm based in Santa Clara, in the San Francisco Bay Area. I like programs where the hard part is technical: distributed systems, payments, and AI platforms where reliability and quality have to be measured, not assumed.</p>
+      <p class="lead">Outside work, I mentor engineers at Scaler Academy on problem-solving and system design.</p>
+      <ul class="edu">
+        <li><b>MS Engineering Management</b>, Trine University <span>(in progress)</span></li>
+        <li><b>MSc Computer Science</b>, University College Dublin <span>(2020 to 2021)</span></li>
+        <li><b>BE Computer Science</b>, University of Mumbai <span>(2015 to 2019)</span></li>
+        <li><b>PMP / PMBOK 7 coursework</b>, Trine University</li>
+        <li><b>Data Engineering Nanodegree</b>, Udacity; <b>Machine Learning and Deep Learning Specializations</b>, Coursera and DeepLearning.AI</li>
+      </ul>
+    </div>
+    <div class="skills">
+      <div><b>Program management</b><div class="chips"><span>Technical program management</span><span>Roadmapping</span><span>Scope and requirements</span><span>Dependency and risk management</span><span>Release management</span><span>Stakeholder management</span><span>OKRs and KPIs</span></div></div>
+      <div><b>Methods and tools</b><div class="chips"><span>Agile</span><span>Scrum</span><span>Kanban</span><span>Waterfall</span><span>SDLC</span><span>ITIL</span><span>Change management</span><span>Jira</span><span>Confluence</span><span>MS Project</span></div></div>
+      <div><b>Engineering</b><div class="chips"><span>Java</span><span>Python</span><span>Go</span><span>Spring Boot</span><span>Kafka</span><span>Microservices</span><span>System design</span></div></div>
+      <div><b>Cloud and AI</b><div class="chips"><span>AWS</span><span>GCP</span><span>Kubernetes</span><span>Terraform</span><span>Datadog</span><span>LLMs</span><span>LangGraph</span><span>RAG</span><span>LLM evaluation</span><span>Guardrails</span></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="band contact" id="contact">
+  <div class="wrap">
+    <h2>Have a technical program that needs to ship? Let's talk.</h2>
+    <p class="lead">I'm looking for technical program manager roles in AI, infrastructure and payments.</p>
+    <div class="reach">
+      <a href="mailto:shwetabhalerao.tech@gmail.com"><span>Email</span><b>shwetabhalerao.tech@gmail.com</b></a>
+      <a href="https://www.linkedin.com/in/shwetabhaleraotech/"><span>LinkedIn</span><b>linkedin.com/in/shwetabhaleraotech</b></a>
+      <a href="https://github.com/ShwetaM51"><span>GitHub</span><b>github.com/ShwetaM51</b></a>
+    </div>
+  </div>
+</section>
+
+<footer class="band" style="padding-block:20px"><div class="wrap">© 2026 Shweta Bhalerao. Built in the Bay Area.</div></footer>
+
+<script>
+{
+  const st = [
+    {n:"L&T Infotech", s:"2019, Associate TPM", t:0},
+    {n:"Equifax", s:"2021, SDE II", t:1},
+    {n:"Mastercard", s:"2023, Tech Lead", t:1},
+    {n:"Talent.com", s:"2025, Tech Lead", t:1},
+    {n:"Next", s:"Technical Program Manager", t:0, next:1}
+  ];
+  const svg = document.getElementById("map");
+  const box = document.getElementById("mapbox");
+  let first = true;
+  const esc = v => v.replace(/&/g,"&amp;");
+  const draw = () => {
+    const W = svg.clientWidth, H = svg.clientHeight;
+    if (!W || !H) return;
+    const vert = W < 620;
+    box.classList.toggle("tall", vert);
+    let pts, tracks, lab;
+    if (!vert) {
+      const m = Math.max(64, W * .07), yT = H * .34, yB = H * .70;
+      const step = (W - 2 * m) / (st.length - 1);
+      pts = st.map((p, i) => [m + i * step, p.t ? yB : yT]);
+      tracks = `<line x1="${m*.35}" y1="${yT}" x2="${W-m*.35}" y2="${yT}" stroke="var(--lime)" stroke-opacity=".55" stroke-width="3"/><line x1="${m*.35}" y1="${yB}" x2="${W-m*.35}" y2="${yB}" stroke="#fff" stroke-opacity=".3" stroke-width="3"/>`;
+      lab = (p, i) => {
+        const [x, y] = pts[i];
+        const a = i === 0 ? "start" : i === st.length - 1 ? "end" : "middle";
+        const dx = i === 0 ? -10 : i === st.length - 1 ? 10 : 0;
+        const y1 = p.t ? y + 36 : y - 40, y2 = p.t ? y + 56 : y - 20;
+        return `<text x="${x+dx}" y="${y1}" text-anchor="${a}" fill="#fff" font-family="Inter Tight,Inter,sans-serif" font-weight="700" font-size="17">${esc(p.n)}</text><text x="${x+dx}" y="${y2}" text-anchor="${a}" fill="#c9d6e3" font-size="14">${esc(p.s)}</text>`;
+      };
+    } else {
+      const xL = 26, xR = 66, top = 34, bot = H - 40;
+      const step = (bot - top) / (st.length - 1);
+      pts = st.map((p, i) => [p.t ? xR : xL, top + i * step]);
+      tracks = `<line x1="${xL}" y1="${top-24}" x2="${xL}" y2="${bot+24}" stroke="var(--lime)" stroke-opacity=".55" stroke-width="3"/><line x1="${xR}" y1="${top-24}" x2="${xR}" y2="${bot+24}" stroke="#fff" stroke-opacity=".3" stroke-width="3"/>`;
+      lab = (p, i) => {
+        const y = pts[i][1];
+        return `<text x="${xR+30}" y="${y-3}" fill="#fff" font-family="Inter Tight,Inter,sans-serif" font-weight="700" font-size="17">${esc(p.n)}</text><text x="${xR+30}" y="${y+17}" fill="#c9d6e3" font-size="14">${esc(p.s)}</text>`;
+      };
+    }
+    const c = (a, b) => vert
+      ? `C${a[0]} ${(a[1]+b[1])/2} ${b[0]} ${(a[1]+b[1])/2} ${b[0]} ${b[1]}`
+      : `C${(a[0]+b[0])/2} ${a[1]} ${(a[0]+b[0])/2} ${b[1]} ${b[0]} ${b[1]}`;
+    const [p0, p1, , p3, p4] = pts;
+    const lead = vert ? `M${p0[0]} ${p0[1]-22}` : `M${p0[0]-26} ${p0[1]}`;
+    const done = `${lead} L${p0[0]} ${p0[1]} ${c(p0, p1)} L${p3[0]} ${p3[1]}`;
+    const next = `M${p3[0]} ${p3[1]} ${c(p3, p4)}`;
+    const dots = pts.map((p, i) => st[i].next
+      ? `<circle cx="${p[0]}" cy="${p[1]}" r="11" fill="var(--hero)" stroke="var(--lime)" stroke-width="3" stroke-dasharray="4 4"/>`
+      : `<circle cx="${p[0]}" cy="${p[1]}" r="10" fill="var(--hero)" stroke="#fff" stroke-width="3.5"/>`).join("");
+    svg.innerHTML = tracks
+      + `<path class="route${first ? " go" : ""}" pathLength="1" d="${done}"/>`
+      + `<path d="${next}" fill="none" stroke="var(--coral)" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 12"/>`
+      + dots + st.map(lab).join("");
+  };
+  const ro = new ResizeObserver(draw);
+  ro.observe(svg);
+  setTimeout(() => { first = false; }, 2200);
+}
+</script>
+</body>
+</html>
